@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
 export async function GET(request: Request) {
-  const adminSecret = request.headers.get("x-admin-secret") || request.nextUrl.searchParams.get("secret");
+  const url = new URL(request.url);
+  const adminSecret = request.headers.get("x-admin-secret") || url.searchParams.get("secret");
   const expectedSecret = process.env.ADMIN_SECRET;
 
   if (expectedSecret && adminSecret !== expectedSecret) {
