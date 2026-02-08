@@ -84,7 +84,7 @@ export default function Home() {
 
   if (submitted) {
     return (
-      <main dir="rtl" lang="ar" className="min-h-screen flex flex-col bg-white">
+      <main dir="rtl" lang="ar" className="min-h-screen flex flex-col bg-white pt-0">
         {logoBackground}
 
         {/* Banner first - full image visible */}
@@ -149,11 +149,11 @@ export default function Home() {
   }
 
   return (
-    <main dir="rtl" lang="ar" className="min-h-screen flex flex-col bg-white">
+    <main dir="rtl" lang="ar" className="min-h-screen flex flex-col bg-white pt-0">
       {logoBackground}
 
       {/* Banner first - full image visible, no crop */}
-      <section className="relative z-10 w-full bg-stone-100">
+      <section className="relative z-10 w-full bg-stone-100 mt-0">
         <div className="relative w-full min-h-[220px] sm:min-h-[280px] flex items-center justify-center">
           <Image
             src="/banner.png"
@@ -189,6 +189,12 @@ export default function Home() {
           <p className="text-stone-600 text-sm sm:text-base mb-3 sm:mb-4">
             شركة نجيب سليم | خبرة، جودة، واستمرارية
           </p>
+
+          <div className="border-2 border-[#522F1F]/50 rounded-none bg-amber-50/90 p-4 mb-4 text-right">
+            <p className="text-stone-800 text-sm sm:text-base">
+              خصم 15٪ لمدة يومين (الأحد والاتنين) – فرع دمياط فقط. وكمان الكولكشن الجديد 2026.
+            </p>
+          </div>
 
           <form
             onSubmit={handleSubmit}

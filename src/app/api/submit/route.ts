@@ -1,14 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
-function generatePromoCode(): string {
-  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-  let code = "NS-";
-  for (let i = 0; i < 8; i++) {
-    code += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  return code;
-}
+const PROMO_CODE = "B2B15";
 
 export async function POST(request: Request) {
   try {
@@ -34,7 +27,7 @@ export async function POST(request: Request) {
     }
 
     const supabase = createClient(supabaseUrl, supabaseKey);
-    const promoCode = generatePromoCode();
+    const promoCode = PROMO_CODE;
 
     const { data, error } = await supabase
       .from("submissions")
