@@ -190,9 +190,9 @@ export default function Home() {
             شركة نجيب سليم | خبرة، جودة، واستمرارية
           </p>
 
-          <div className="border-2 border-[#522F1F]/50 rounded-none bg-amber-50/90 p-4 mb-4 text-right">
-            <p className="text-stone-800 text-sm sm:text-base">
-              خصم 15٪ لمدة يومين (الأحد والاتنين) – فرع دمياط فقط. وكمان الكولكشن الجديد 2026.
+          <div className="border-2 border-[#522F1F]/50 rounded-none bg-amber-50/90 p-5 sm:p-6 mb-4 text-right">
+            <p className="text-stone-800 text-base sm:text-lg">
+              خصم <span className="font-bold">15٪</span> لمدة يومين (الأحد والاتنين) – فرع دمياط فقط. وكمان الكولكشن الجديد 2026.
             </p>
           </div>
 
